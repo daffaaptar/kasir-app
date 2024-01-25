@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 70px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.btn-logout {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dashboard-content, .additional-content {
+    margin-top: 20px;
+}
+
+.text-blue-500 {
+    color: #007bff;
+}
+
+.text-blue-500:hover {
+    text-decoration: underline;
+}
