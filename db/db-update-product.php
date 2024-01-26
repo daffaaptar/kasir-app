@@ -7,7 +7,7 @@ if (isset($_POST['update_product'])) {
     $nama_produk - $_POST['nama_produk'];
     $harga_produk = $_POST['harga_produk'];
 
-    $stmt = $conn->prepare("UPDATE products SET nama_produk = ?, harga_produk = ? WHERE id = ?")
+    $stmt = $conn->prepare("UPDATE products SET nama_produk = ?, harga_produk = ? WHERE id = ?");
     $stmt->bind_param("sii, $nama_produk, $harga_produk, $id");
 
     if ($stmt->execute()) {
@@ -22,7 +22,7 @@ if (isset($_POST['update_product'])) {
 }
      $stmt->close();
      $stmt->close();
-     header('location: ../pages/kasir/manage_product.php');
+     header('location: ../pages/kasir/manage-product.php');
      exit;
 
 ?>

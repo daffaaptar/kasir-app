@@ -17,7 +17,7 @@ require_once('../db/db-login.php')
 <body>
 
 <div class="container">
-    <img style="width: 100px; margin-bottom: 2rem;" src="./assets/images/logo.png" alt="Jouvnie Logo">
+    <img style="width: 100px; margin-bottom: 2rem;" src="../assets/img/jouvnie_logo.jpg" alt="Jouvnie Logo">
 
     <form method="POST">
         <?php if (isset($error_message)): ?>

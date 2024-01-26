@@ -9,10 +9,11 @@ require_once('../db/db-register.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/style/register.css">
 </head>
 <body>
     <div class="contaainer">
+    <img style="width: 100px; margin-bottom: 2rem;" src="../assets/img/jouvnie_logo.jpg" alt="Jouvnie Logo">
         <img style= "width: 100px; margin-bottom 2rem;" src="" alt="">
         <form method="post">
             <?php if (isset($error_massage)) : ?>

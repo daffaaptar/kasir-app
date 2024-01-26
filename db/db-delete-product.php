@@ -18,7 +18,7 @@ if (isset($_POST['delete_product']) && isset($_POST['id'])) {
     $stmt->close();
     $conn->close();
 
-    header('Location: ../pages/kasir/manage_product.php');
+    header('Location: ../pages/kasir/manage-product.php');
     exit;
 }
 ?>

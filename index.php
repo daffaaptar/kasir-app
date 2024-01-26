@@ -70,14 +70,15 @@ require_once('./db/db-login.php')
     <div class="mask">
       <div class="d-flex justify-content-center align-items-center h-400">
         <div class="text-white">
+        <img style="width: 100px; margin-bottom: 2rem; margin-top: 2rem;" src="./assets/img/jouvnie_logo.jpg" alt="Jouvnie Logo">
           <h1 class="mb-3">Jouvnie</h1>
           <h5 class="mb-4">
             Cashier Management
           </h5>
           <a class="btn btn-outline-light btn-lg m-2" href="./pages/login.php"
-            role="button" rel="nofollow" target="_blank">Sign In</a>
+            role="button" rel="nofollow">Sign In</a>
           <a class="btn btn-outline-light btn-lg m-2" href="./pages/register.php"
-            target="_blank" role="button">Sign Up</a>
+            role="button">Sign Up</a>
         </div>
       </div>
     </div>

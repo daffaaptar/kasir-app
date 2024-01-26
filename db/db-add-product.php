@@ -2,12 +2,13 @@
 session_start();
 require_once('db-connection.php');
 
-if(isset[$_POST['add_product']]) {
+if (isset($_POST['add_product'])) {
     $nama_produk =  $_POST['nama_produk'];
     $harga_produk = $_POST['harga_produk'];
-    $jumlah = $POST['jumlah'];
+    $jumlah = $_POST['jumlah'];
 
-    $kode_unik = bin2hex(random_bytes(5));
+    // Generating a random string using openssl_random_pseudo_bytes (alternative to random_bytes)
+    $kode_unik = bin2hex(openssl_random_pseudo_bytes(5));
 
     $stmt = $conn->prepare("INSERT INTO products (nama_produk, harga_produk, jumlah, kode_unik) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("siis", $nama_produk, $harga_produk, $jumlah, $kode_unik);
@@ -22,7 +23,7 @@ if(isset[$_POST['add_product']]) {
     $stmt->close();
     $conn->close();
 
-    header('Location: ../pages/kasir/manage_product.php');
+    header('Location: ../pages/kasir/manage-product.php');
     exit;
 }
 ?>
