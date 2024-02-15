@@ -15,6 +15,17 @@ if (isset($_POST['add_product'])) {
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
+        // Log activity
+        $timestamp = date("Y-m-d H:i:s");
+        $username = $_SESSION['username'];
+        $action = "Add Product";
+        $product_id = $stmt->insert_id; // Get the ID of the newly inserted product
+        $product_name = $nama_produk;
+        $log_stmt = $conn->prepare("INSERT INTO activity_log (timestamp, username, action, product_id, product_name) VALUES (?, ?, ?, ?, ?)");
+        $log_stmt->bind_param("sssis", $timestamp, $username, $action, $product_id, $product_name);
+        $log_stmt->execute();
+        $log_stmt->close();
+        
         echo "Product added successfully!";
     } else {
         echo "Failed to add product. Error: " . $stmt->error;
